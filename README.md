@@ -59,7 +59,10 @@ Returns nothing.
 
 Members:
 
+```haxe
 Enhance.PLACEMENT_DEFAULT:String
+```
+
 The default placement of ads, including interstitial ads.
 
 
@@ -176,7 +179,7 @@ Placement is an optional internal placement (from the Enhance mediation editor).
 Returns true if any ad is ready, false otherwise.
 
 
-```
+```haxe
 Enhance.showBannerAdWithPosition(
     ?placement:String = Enhance.PLACEMENT_DEFAULT,
     ?position:Int = Enhance.POSITION_BOTTOM
@@ -274,9 +277,10 @@ Returns nothing.
 
 Members:
 
-```
+```haxe
 Enhance.PLACEMENT_DEFAULT:String
 ```
+
 The default placement of ads, including offer walls.
 
 
@@ -337,7 +341,7 @@ The connector library allows you to send custom events to the hooked analytics n
 
 Example Usage:
 
-```
+```haxe
 Enhance.logEvent("game_over", "level", "1");
 Enhance.logEvent("user_exit");
 ```
@@ -345,7 +349,7 @@ Enhance.logEvent("user_exit");
 
 Methods:
 
-```
+```haxe
 Enhance.logEvent(
     eventType:String,
     ?paramKey:String,
@@ -364,7 +368,7 @@ Local Notifications are reminders which show up on your screen after the app bec
 
 Example Usage:
 
-```
+```haxe
 var onPermissionGranted = function() {
     // Success
     Enhance.enableLocalNotification("Game", "Play me!", 60);
@@ -380,7 +384,7 @@ Enhance.requestLocalNotificationPermission(onPermissionGranted, onPermissionRefu
 
 Methods:
 
-```
+```haxe
 Enhance.requestLocalNotificationPermission(
     onPermissionGrantedCallback:Void->Void,
     onPermissionRefusedCallback:Void->Void
@@ -391,7 +395,7 @@ Request a permission from the user to show local notifications. This won't have 
 Returns nothing.
 
 
-```
+```haxe
 Enhance.enableLocalNotification(
     title:String,
     message:String,
@@ -403,7 +407,7 @@ Schedule a new local notification, if possible. The notification will persist un
 Returns nothing.
 
 
-```
+```haxe
 Enhance.disableLocalNotification():Void
 ```
 
@@ -418,7 +422,7 @@ The connector library provides a set of functions which help you to make use of 
 
 Example Usage:
 
-```
+```haxe
 var onPurchaseSuccess = function() {
     var price:String = Enhance.purchases.getDisplayPrice("my_product", "$5");
 
@@ -439,7 +443,7 @@ if (Enhance.purchases.isSupported()) {
 
 Methods:
 
-```
+```haxe
 Enhance.purchases.isSupported():Bool
 ```
 
@@ -447,7 +451,7 @@ Check if the In-App Purchasing is currently available in your application.
 Returns true if purchasing is available, false otherwise.
 
 
-```
+```haxe
 Enhance.purchases.attemptPurchase(
     productName:String,
     onPurchaseSuccessCallback:Void->Void,
@@ -461,7 +465,7 @@ Callbacks specify functions which are invoked when purchase is successful or not
 Returns nothing.
 
 
-```
+```haxe
 Enhance.purchases.consume(
     productName:String,
     onConsumeSuccessCallback:Void->Void,
@@ -475,7 +479,7 @@ Callbacks specify functions which are invoked when consume is successful or not.
 Returns nothing.
 
 
-```
+```haxe
 Enhance.purchases.isItemOwned(
     productName:String
 ):Bool
@@ -487,7 +491,7 @@ Product name is the reference name which you entered during the Enhance flow.
 Returns true if the item is owned, false otherwise.
 
 
-```
+```haxe
 Enhance.purchases.getOwnedItemCount(
     productName:String
 ):Int
@@ -498,7 +502,7 @@ Product name is the reference name which you entered during the Enhance flow.
 Returns a number of the given product copies.
 
 
-```
+```haxe
 Enhance.purchases.manuallyRestorePurchases(
     onRestoreSuccessCallback:Void->Void,
     onRestoreFailedCallback:Void->Void
@@ -510,7 +514,7 @@ Callbacks specify functions which are invoked when restore is successful or not.
 Returns nothing.
 
 
-```
+```haxe
 Enhance.purchases.getDisplayPrice(
     productName:String,
     defaultPrice:String
@@ -523,7 +527,7 @@ Default price will be used if a real one can't be fetched.
 Returns a string containing the localized display price.
 
 
-```
+```haxe
 Enhance.purchases.getDisplayTitle(
     productName:String,
     defaultTitle:String
@@ -536,7 +540,7 @@ Default title will be used if a real one can't be fetched.
 Returns a string containing the localized display title.
 
 
-```
+```haxe
 Enhance.purchases.getDisplayDescription(
     productName:String,
     defaultDescription:String
@@ -552,6 +556,6 @@ Returns a string containing the localized display description.
 Demo Project
 --------------
 
-For a full implementation example, please see the demo project which can be found in the 'demo_project' directory within the distribution package.
+For a full implementation example, please see the demo project which can be found in the 'samples/demo' directory within the distribution package.
 
 
