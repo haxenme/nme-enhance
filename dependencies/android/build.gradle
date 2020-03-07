@@ -1,0 +1,22 @@
+apply plugin: 'android-library'
+
+android {
+    compileSdkVersion ::ANDROID_TARGET_SDK_VERSION::
+    defaultConfig {
+        targetSdkVersion ::ANDROID_TARGET_SDK_VERSION::
+    }
+    buildToolsVersion "28.0.3"
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+        }
+    }
+
+    dependencies {
+       api fileTree(dir: 'libs', include: '*.jar')
+       implementation project(":extension-api")
+    }
+}
+

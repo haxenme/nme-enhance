@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+    <!-- iOS -->
+    <ndll name="enhance" if="ios"/>
+    <dependency name="connector" path="libs/libconnector.a" if="ios"/>
+    
+    <!-- Android -->
+    <dependency name="enhance" path="dependencies/android" if="android" />
+    <android extension="org.haxe.extension.EnhanceBridge" if="android"/>
+
+    <classpath name="src" />
+</project>

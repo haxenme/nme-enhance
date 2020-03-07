@@ -1,0 +1,11 @@
+{
+  "name": "nme-enhance",
+  "url": "https://github.com/nme-enhance",
+  "license": "MIT",
+  "tags": [ "nme", "opengl", "enhance", "extension" ],
+  "description": "Nme interface to the enhance.co mobile Drag and Drop extensions",
+  "version": "2.0.0",
+  "releasenote": "Initial release.",
+  "contributors": ["gamehaxe", "Enhance, Inc."],
+  "dependencies": {}
+}

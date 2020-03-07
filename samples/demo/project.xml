@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="Enhance NME Demo" package="co.enhance.nmedemo" version="1.0.0" company="Enhance" />
+	<app main="Main" path="Export" file="EnhanceNmeDemo" />
+
+	<source path="Source" />
+	
+	<haxelib name="nme" />
+	<haxelib name="nme-enhance" />
+	
+	<assets path="Assets" rename="assets" />
+
+	<window width="480" height="800" unless="mobile" />
+
+	<window if="mobile" orientation="portrait" fullscreen="true" width="480" height="800" />
+
+	<window resizable="false" /> 
+
+	<icon path="Assets/icons/29.png" size="29"/>
+	<icon path="Assets/icons/36.png" size="36"/>
+	<icon path="Assets/icons/40.png" size="40"/>
+	<icon path="Assets/icons/48.png" size="48"/>
+	<icon path="Assets/icons/50.png" size="50"/>
+	<icon path="Assets/icons/57.png" size="57"/>
+	<icon path="Assets/icons/58.png" size="58"/>
+	<icon path="Assets/icons/60.png" size="60"/>
+	<icon path="Assets/icons/72.png" size="72"/>
+	<icon path="Assets/icons/75.png" size="75"/>
+	<icon path="Assets/icons/76.png" size="76"/>
+	<icon path="Assets/icons/80.png" size="80"/>
+	<icon path="Assets/icons/87.png" size="87"/>
+	<icon path="Assets/icons/96.png" size="96"/>
+	<icon path="Assets/icons/100.png" size="100"/>
+	<icon path="Assets/icons/114.png" size="114"/>
+	<icon path="Assets/icons/120.png" size="120"/>
+	<icon path="Assets/icons/144.png" size="144"/>
+	<icon path="Assets/icons/152.png" size="152"/>
+	<icon path="Assets/icons/167.png" size="167"/>
+	<icon path="Assets/icons/180.png" size="180"/>
+	<icon path="Assets/icons/192.png" size="192"/>
+
+  <android if="forcearmv7" >
+     <abi value="armeabi-v7a" />
+  </android>
+
+</project>
