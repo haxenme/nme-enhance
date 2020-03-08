@@ -61,17 +61,9 @@ class Button extends Sprite {
         addChild(pressed);
         addChild(textField);
 
-        #if desktop
         addEventListener(MouseEvent.MOUSE_DOWN, tapBegin);
         addEventListener(MouseEvent.MOUSE_UP, tapEnd);
         addEventListener(MouseEvent.MOUSE_OUT, rollOut);
-        #end
-
-        #if mobile
-        addEventListener(TouchEvent.TOUCH_BEGIN, tapBegin);
-        addEventListener(TouchEvent.TOUCH_END, tapEnd);
-        addEventListener(TouchEvent.TOUCH_ROLL_OUT, rollOut);
-        #end
     }
         
     public function tapBegin(e:Event) {
